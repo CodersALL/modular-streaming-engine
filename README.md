@@ -59,8 +59,7 @@ Benchmarks executed on **500,000 random integers** (domain up to $50,000,000$) w
 * Python 3.8+
 * C++ compiler supporting C++11 or later (`g++`, `clang`, or MSVC)
   #### INSTALL g++ For Ubuntu:
-     `sudo apt update`
-     `sudo apt install build-essential`
+     `sudo apt update && sudo apt install build-essential`
   #### VERIFY g++ INSTALLATION
      `g++ --version`
 * Cython
