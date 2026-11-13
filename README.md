@@ -58,7 +58,12 @@ Benchmarks executed on **500,000 random integers** (domain up to $50,000,000$) w
 ### Prerequisites
 * Python 3.8+
 * C++ compiler supporting C++11 or later (`g++`, `clang`, or MSVC)
-* Cython (`pip install cython`)
+  #### INSTALL g++ For Ubuntu:
+     `sudo apt update`
+     `sudo apt install build-essential`
+  #### VERIFY g++ INSTALLATION
+     `g++ --version`
+* Cython
 
 ### Compiling the Extension
 1. Clone the repository:
@@ -66,8 +71,13 @@ Benchmarks executed on **500,000 random integers** (domain up to $50,000,000$) w
    git clone https://github.com/CodersALL/modular-streaming-engine.git
    cd modular-streaming-engine
    ```
-
-2. Build the Cython C++ extension in-place:
+2. Install dependencies:
+     ```bash
+     pip install cython
+     # OR
+     pip install -r requirements.txt
+     ```
+4. Build the Cython C++ extension in-place:
    ```bash
    python setup.py build_ext --inplace
    ```
