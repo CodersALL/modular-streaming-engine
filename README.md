@@ -58,10 +58,29 @@ Benchmarks executed on **500,000 random integers** (domain up to $50,000,000$) w
 ### Prerequisites
 * Python 3.8+
 * C++ compiler supporting C++11 or later (`g++`, `clang`, or MSVC)
-  #### INSTALL g++ For Ubuntu:
+  #### INSTALL g++ For Ubuntu/Linux:
+    Run below command ion terminal
+    
      `sudo apt update && sudo apt install build-essential`
   #### VERIFY g++ INSTALLATION
      `g++ --version`
+  #### INSTALL clang For Windows:
+    Run below command in powershell
+    
+    `winget install --id=MartinStorsjo.LLVM-MinGW.UCRT -e`
+    
+    (Download Visual Studio Build Tools for C++)[https://visualstudio.microsoft.com/visual-cpp-build-tools/]
+    
+    Post that, install file: vs_BuildTools.exe
+    
+    After installation completed, from "Visual Studio Build Tool" manager, tick 'Desktop development with C++' and then from Optional, tick 'MSVC Build Tools for x64/x86 and Windows 10/11 SDK' and press install button.
+    
+    (Optional) Screen may ask to restart your system.
+  #### VERIFY clang INSTALLATION
+    Restart powershell and run below command in powershell
+    
+    `clang++ --version`
+    
 * Cython
 
 ### Compiling the Extension
@@ -72,7 +91,7 @@ Benchmarks executed on **500,000 random integers** (domain up to $50,000,000$) w
    ```
 2. Install dependencies:
      ```bash
-     pip install cython
+     pip install cython setuptools
      # OR
      pip install -r requirements.txt
      ```
